@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\movie;
 
-class movieController extends Controller
-{
+class movieController extends Controller{
     //
 
     function index(){
-       return "vedo se funziona"; 
+        $data = movie::all();
+       return $data; 
     }
 }
