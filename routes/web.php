@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::get("/movie","movieController@index")->name("movies.index");
+
+
+Route::get('/cardmovie', "CardMovieController@index"
+  );
+
+/* Route::get('/cardmovie' ,function(){
+  
+    return view('cardmovie'); 
+}); */
+
+
+
